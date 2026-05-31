@@ -50,8 +50,8 @@ Camera Input → Preprocessing (OpenCV) → Dot Detection (YOLOv8) → Cell Grou
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/braillevision.git
-cd braillevision
+git clone https://github.com/YOUR_USERNAME/TouchVision.git
+cd TouchVision
 ```
 
 ### 2. Backend Setup
@@ -150,18 +150,9 @@ python inference/inference.py --source 0 --weights model/best.pt
 
 ### Sample Input Link
 Provide a test image of Braille dots for inference:
-- **Download Test Image:** [PASTE YOUR SAMPLE IMAGE LINK - See PROJECT_LINKS.md]
-- **Google Drive Example:** `https://drive.google.com/file/d/FILE_ID/view`
-- **Format:** JPG, PNG, or BMP
-- **Size:** Recommended 640x480 or larger
-- **Content:** Clear photo of embossed or handwritten Braille dots
+- **Download Test Image:** https://drive.google.com/drive/folders/1-1XwjDSOagdEVa8vZktf53tB8aPE2Rzp?usp=sharing
 
-### Sample Output Link
-Example output with detected dots and decoded text:
-- **Output Format:** JSON response with detected text and confidence scores
-- **Example Output Path:** `outputs/` directory contains annotated images
-- **Demo/Video Link:** [PASTE YOUR DEMO LINK - See PROJECT_LINKS.md]
-- **Example:** Braille detection output showing visual annotations
+
 
 ### Example API Response
 ```json

@@ -693,16 +693,3 @@ model.predict(image, imgsz=1280)  # Larger input
 - PROJECT_LINKS.md - Important links
 
 ---
-
-## Support
-
-For issues or questions:
-1. Check this guide's troubleshooting section
-2. Review README.md
-3. Check GitHub issues
-4. Review code comments
-
----
-
-**Last Updated:** 2026-05-31  
-**Version:** 1.0.0

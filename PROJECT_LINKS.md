@@ -27,23 +27,8 @@ Google Drive Link: https://drive.google.com/drive/folders/1K_dG97WgqJiI14l4B9YQx
 ## 📌 Sample Content Links
 
 ### Sample Input Image
-**Status:** ⏳ PLACEHOLDER  
-**Purpose:** Example Braille image for testing
 
-```
-Sample Image Link: [PASTE SAMPLE IMAGE LINK HERE]
-
-### Sample Output/Demo
-**Status:** ⏳ PLACEHOLDER  
-**Purpose:** Example output showing detected Braille
-
-```
-Demo Video Link: [PASTE DEMO VIDEO LINK HERE]
-Sample Output Link: [PASTE OUTPUT IMAGE LINK HERE]
-```
-
----
-
+Sample Image Link:https://drive.google.com/drive/folders/1qwbkckObIPJn1zQVHMNpYPKXdy3QDkxg?usp=drive_link
 
 
 

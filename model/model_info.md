@@ -33,8 +33,7 @@
 
 ### Model Weights Download
 Download `best.pt` from:
-- [Google Drive Link](https://drive.google.com/drive/folders/YOUR_FOLDER_ID)
-- [Hugging Face](https://huggingface.co/YOUR_USERNAME/braillevision-detector)
+- [Google Drive Link] https://drive.google.com/drive/folders/1K_dG97WgqJiI14l4B9YQxJoDKqa4jcZo?usp=sharing
 
 ### Dataset Details
 - **Total Images:** ~500
@@ -74,6 +73,3 @@ yolo detect train \
 
 ---
 
-**Model Created:** 2026-05-31  
-**Framework:** Ultralytics YOLOv8  
-**License:** MIT

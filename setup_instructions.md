@@ -195,6 +195,4 @@ pip install ultralytics[gpu]
 
 ## Support
 
-For issues or questions, contact: [your-email@example.com]
-
 For model weights access: [Google Drive / Hugging Face link]
