@@ -1,9 +1,3 @@
-<!-- 
-PROJECT LINKS PLACEHOLDER
-Update this file with your project-specific links
-This file helps organize all important resources in one place
--->
-
 # 📍 BrailleVision Project Links
 
 > **Important:** Update all placeholders with your actual links below
@@ -57,11 +51,8 @@ Sample Output Link: [PASTE OUTPUT IMAGE LINK HERE]
 ## 👥 Team Contact Links
 
 ### GitHub Repository
-**Status:** ⏳ PLACEHOLDER
-
-```
-Repository Link: https://github.com/[YOUR_USERNAME]/braillevision
-```
+**Status:** ✅ ACTIVE  
+**URL:** https://github.com/jatin-karma/BrailleVision
 
 ### Team Member Contacts
 
@@ -74,7 +65,38 @@ Phone (Live Verification): [+XX XXX XXXX XXXX]
 
 ---
 
-## 📚 Documentation Links
+## 📚 Documentation Files (In Repository)
+
+### Quick Reference Guides
+- **README.md** - Complete project overview and getting started
+- **USAGE_GUIDE.md** ⭐ - How to use repository, model, and API (START HERE!)
+- **TRAINING_GUIDE.md** - Step-by-step training instructions
+- **QUICK_LINK_GUIDE.txt** - Quick reference card (print this!)
+- **setup_instructions.md** - Quick setup reference
+
+### For Different Users
+
+**Non-Technical Users (Want to use web interface):**
+1. Start: README.md (Setup section)
+2. Then: USAGE_GUIDE.md (Web Interface section)
+
+**Developers (Want to integrate API):**
+1. Start: README.md (How to Run section)
+2. Then: USAGE_GUIDE.md (API Usage section)
+3. Reference: README.md (Sample Input/Output)
+
+**ML Engineers (Want to train model):**
+1. Start: TRAINING_GUIDE.md (Complete guide)
+2. Reference: README.md (Model Training section)
+
+**DevOps/Deployment:**
+1. Start: setup_instructions.md
+2. Then: README.md (Setup Instructions)
+3. Reference: USAGE_GUIDE.md (Troubleshooting)
+
+---
+
+## 📖 Documentation Links
 
 ### Colab Training Notebook
 **Status:** ⏳ PLACEHOLDER  
@@ -91,6 +113,14 @@ Format: https://colab.research.google.com/drive/NOTEBOOK_ID
 ```
 Model Link: [PASTE MODEL DOWNLOAD LINK IF EXTERNAL]
 Format: Google Drive, Hugging Face, or other hosting
+```
+
+### Additional Resources
+
+```
+Model Documentation: model/model_info.md
+Dataset Information: dataset/dataset_info.md
+AI Tools Used: ai_tools_disclosure.md
 ```
 
 ---
@@ -114,16 +144,19 @@ Format: https://your-website.com or https://your-app.vercel.app
 
 ---
 
-## 📋 Quick Reference
+## 📋 Quick Reference Table
 
 | Resource | Status | Link |
 |---|---|---|
 | Google Drive Dataset | 🔴 Needed | [PASTE HERE] |
 | Sample Input Image | 🔴 Needed | [PASTE HERE] |
 | Sample Output | 🔴 Needed | [PASTE HERE] |
-| GitHub Repo | 🔴 Needed | [PASTE HERE] |
+| GitHub Repo | ✅ Active | https://github.com/jatin-karma/BrailleVision |
 | Colab Notebook | 🟡 Optional | [PASTE HERE] |
 | Demo Website | 🟡 Optional | [PASTE HERE] |
+| README.md | ✅ Active | In repository |
+| USAGE_GUIDE.md | ✅ Active | In repository |
+| TRAINING_GUIDE.md | ✅ Active | In repository |
 
 ---
 
@@ -136,15 +169,23 @@ Format: https://your-website.com or https://your-app.vercel.app
 5. **Verify sharing settings** (especially for Google Drive)
 6. **Commit to GitHub** when all links are added
 
+**Command to commit:**
+```bash
+git add PROJECT_LINKS.md
+git commit -m "Update project links"
+git push
+```
+
 ---
 
 ## ⚠️ Important Reminders
 
 - ✅ **Google Drive Links:** Must be shared (set to "Viewer" or "Editor")
-- ✅ **GitHub Links:** Must be public repository for Hackathon submission
+- ✅ **GitHub Links:** Repository must be public for submission
 - ✅ **Email:** Use team leader's email for official communication
-- ✅ **Phone:** For live verification with judges
+- ✅ **Phone:** Required for live verification with judges
 - ✅ **Test All Links:** Click each link to verify it works before submission
+- ✅ **Keep Updated:** Update links if you change files/location
 
 ---
 
@@ -157,12 +198,39 @@ Format: https://your-website.com or https://your-app.vercel.app
 
 ---
 
+## 🚀 Quick Start Using This Repository
+
+```bash
+# 1. Clone
+git clone https://github.com/jatin-karma/BrailleVision.git
+cd BrailleVision
+
+# 2. Install
+pip install -r requirements.txt
+cd frontend && npm install && cd ..
+
+# 3. Run (Terminal 1)
+python -m uvicorn backend.app:app --reload
+
+# 4. Run (Terminal 2)
+cd frontend && npm run dev
+
+# 5. Open browser
+http://localhost:5173
+```
+
+For detailed instructions, see: **USAGE_GUIDE.md**
+
+---
+
 ## 📞 Support
 
-If you need help with links:
-1. Check **TRAINING_GUIDE.md** for Google Drive setup
-2. Review **README.md** for submission requirements
-3. Check **SESSION_SUMMARY.md** for quick reference
+**For questions about:**
+- **Setup/Installation** → See: setup_instructions.md
+- **How to Use** → See: USAGE_GUIDE.md
+- **Model Training** → See: TRAINING_GUIDE.md
+- **API Integration** → See: USAGE_GUIDE.md (API section)
+- **Troubleshooting** → See: README.md or USAGE_GUIDE.md
 
 ---
 

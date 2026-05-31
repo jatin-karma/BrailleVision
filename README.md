@@ -343,6 +343,241 @@ for filename in os.listdir(input_dir):
 
 ---
 
+## 💻 Usage Guide: Using the Repository
+
+### Quick Start (5 Minutes)
+
+**1. Clone and Setup**
+```bash
+git clone https://github.com/jatin-karma/BrailleVision.git
+cd BrailleVision
+pip install -r requirements.txt
+cd frontend && npm install && cd ..
+```
+
+**2. Start Backend**
+```bash
+python -m uvicorn backend.app:app --reload
+```
+*API will be available at: http://localhost:8000*
+
+**3. Start Frontend (New Terminal)**
+```bash
+cd frontend
+npm run dev
+```
+*Web app will be available at: http://localhost:5173*
+
+**4. Open Browser**
+Navigate to: http://localhost:5173
+
+**5. Upload Braille Image**
+- Click upload button
+- Select a Braille image
+- See detected Braille and decoded text
+- Click "Speak" to hear the result
+
+### Using the Model Directly
+
+**Python Code Example:**
+```python
+from backend.core.detector import BrailleDetector
+from backend.core.preprocessor import preprocess
+from backend.core.cell_grouper import group_into_cells
+from backend.core.decoder import decode_cells
+import cv2
+
+# Load image
+image = cv2.imread("path/to/braille.jpg")
+
+# Initialize detector
+detector = BrailleDetector()
+
+# Preprocess
+preprocessed = preprocess(image)
+
+# Detect dots
+boxes, confidences = detector.detect(preprocessed)
+
+# Group and decode
+cells = group_into_cells(boxes)
+text = decode_cells(cells)
+
+print(f"Detected: {text}")
+```
+
+**Using YOLOv8 Directly:**
+```python
+from ultralytics import YOLO
+import cv2
+
+# Load model
+model = YOLO("model/best.pt")
+
+# Run inference
+image = cv2.imread("braille_image.jpg")
+results = model.predict(image)
+
+# Get detections
+for result in results:
+    print(f"Boxes: {result.boxes}")
+    print(f"Confidence: {result.boxes.conf}")
+```
+
+### API Usage Examples
+
+**Python with Requests:**
+```python
+import requests
+
+# Upload and predict
+with open("braille_image.jpg", "rb") as f:
+    response = requests.post(
+        "http://localhost:8000/predict",
+        files={"file": f}
+    )
+    
+result = response.json()
+print(f"Text: {result['text']}")
+print(f"Confidence: {result['confidence']}")
+print(f"Cells Found: {result['cells_found']}")
+```
+
+**JavaScript/Frontend:**
+```javascript
+const formData = new FormData();
+formData.append('file', imageFile);
+
+const response = await fetch('http://localhost:8000/predict', {
+    method: 'POST',
+    body: formData
+});
+
+const result = await response.json();
+console.log("Detected text:", result.text);
+console.log("Confidence:", result.confidence);
+```
+
+**cURL (Command Line):**
+```bash
+# Predict from image
+curl -X POST http://localhost:8000/predict \
+  -F "file=@braille_image.jpg" | jq
+
+# Get API info
+curl http://localhost:8000/info | jq
+
+# Speak detected text
+curl -X POST http://localhost:8000/speak \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Hello World"}'
+```
+
+### Model Information
+
+**Model Type:** YOLOv8 Nano (Lightweight)
+**Input Size:** 640x640 pixels
+**Classes:** 1 (Braille dot detection)
+**Format:** PyTorch (.pt)
+**Size:** ~6 MB
+**Speed:** ~45ms/frame (CPU), ~12ms/frame (GPU)
+
+**Model Location:**
+- `model/best.pt` - Use this for inference
+- Trained on custom Braille dot dataset
+- See `model/model_info.md` for details
+
+### Directory Structure Quick Reference
+
+```
+BrailleVision/
+├── backend/          ← FastAPI server (start here)
+│   ├── app.py       ← Main application
+│   ├── config.py    ← Configuration
+│   └── core/        ← Core modules (detection, decoding, TTS)
+│
+├── frontend/        ← React web interface
+│   └── src/         ← React components
+│
+├── model/           ← Trained YOLOv8 model
+│   └── best.pt      ← Use this for inference
+│
+├── inference/       ← Inference scripts
+│   ├── inference.py
+│   └── predict.py
+│
+├── training/        ← Training scripts
+│   ├── train.py
+│   └── BV.py
+│
+├── dataset/         ← Dataset config
+│   └── data.yaml
+│
+├── README.md        ← This file
+├── TRAINING_GUIDE.md    ← Training instructions
+└── PROJECT_LINKS.md     ← Important links
+```
+
+### Common Tasks
+
+**Task: Run inference on single image**
+```bash
+python inference/inference.py --source braille.jpg --weights model/best.pt
+```
+
+**Task: Test with webcam**
+```bash
+python inference/inference.py --source 0 --weights model/best.pt
+```
+
+**Task: Process batch of images**
+```bash
+python inference/inference.py --source images/ --weights model/best.pt
+```
+
+**Task: Get API response in JSON**
+```bash
+curl -X POST http://localhost:8000/predict -F "file=@image.jpg" | python -m json.tool
+```
+
+**Task: Custom text-to-speech**
+```bash
+curl -X POST http://localhost:8000/speak \
+  -H "Content-Type: application/json" \
+  -d '{"text":"BrailleVision"}'
+```
+
+### Troubleshooting Usage Issues
+
+**Issue: Model not loading**
+```
+Error: Model weights not found at model/best.pt
+```
+Solution: Ensure `model/best.pt` exists. Download from model storage.
+
+**Issue: CORS error in frontend**
+```
+Error: Access to XMLHttpRequest blocked by CORS
+```
+Solution: Backend is running. Check `backend/config.py` CORS settings.
+
+**Issue: Port already in use**
+```
+ERROR: Address already in use
+```
+Solution: Change port number:
+```bash
+python -m uvicorn backend.app:app --port 8001
+```
+
+**Issue: No camera detected**
+```
+Error: Camera not found
+```
+Solution: Check camera permissions or use image files instead.
+
+---
+
 ## 📁 Project Structure
 
 ```
