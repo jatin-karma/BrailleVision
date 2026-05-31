@@ -1,4 +1,4 @@
-# 📍 BrailleVision Project Links
+# 📍 TouchVision Project Links
 
 > **Important:** Update all placeholders with your actual links below
 
@@ -18,7 +18,7 @@ Share Setting: Must be shared (Viewer access minimum)
 
 **To get your link:**
 1. Open Google Drive
-2. Find your BrailleVision dataset folder
+2. Find your TouchVision dataset folder
 3. Right-click → "Get link"
 4. Copy link and paste above
 5. Verify sharing is enabled
@@ -52,7 +52,7 @@ Sample Output Link: [PASTE OUTPUT IMAGE LINK HERE]
 
 ### GitHub Repository
 **Status:** ✅ ACTIVE  
-**URL:** https://github.com/jatin-karma/BrailleVision
+**URL:** https://github.com/jatin-karma/TouchVision
 
 
 
@@ -99,8 +99,8 @@ AI Tools Used: ai_tools_disclosure.md
 
 ```bash
 # 1. Clone
-git clone https://github.com/jatin-karma/BrailleVision.git
-cd BrailleVision
+git clone https://github.com/jatin-karma/TouchVision.git
+cd TouchVision
 
 # 2. Install
 pip install -r requirements.txt

@@ -168,7 +168,7 @@ def print_instructions():
 STEP 1: Prepare Dataset on Google Drive
 ────────────────────────────────────────
 1. Go to your Google Drive where you trained on Colab
-2. Find the BrailleVision dataset folder
+2. Find the TouchVision dataset folder
 3. Download the following structure:
 
    dataset/
@@ -184,7 +184,7 @@ STEP 1: Prepare Dataset on Google Drive
 STEP 2: Place Dataset
 ──────────────────────
 Place the downloaded dataset folder into:
-  d:/BrailleVision/dataset/
+  d:/TouchVision/dataset/
 
 STEP 3: Run Training
 ─────────────────────
@@ -247,7 +247,7 @@ def main():
         print("\n⚠️  Dataset images not found!")
         print_instructions()
         print("\nPlease download your dataset from Google Drive and place it in:")
-        print("  d:/BrailleVision/dataset/")
+        print("  d:/TouchVision/dataset/")
         return False
 
     # 4. Run training

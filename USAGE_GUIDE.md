@@ -1,6 +1,6 @@
-# 🎯 BrailleVision Usage Guide
+# 🎯 TouchVision Usage Guide
 
-Complete guide on how to use the BrailleVision repository, model, and API.
+Complete guide on how to use the TouchVision repository, model, and API.
 
 ---
 
@@ -23,8 +23,8 @@ Complete guide on how to use the BrailleVision repository, model, and API.
 
 **Step 1: Clone the Repository**
 ```bash
-git clone https://github.com/jatin-karma/BrailleVision.git
-cd BrailleVision
+git clone https://github.com/jatin-karma/TouchVision.git
+cd TouchVision
 ```
 
 **Step 2: Install Dependencies**
@@ -44,7 +44,7 @@ python -m uvicorn backend.app:app --reload
 ```
 Expected output:
 ```
-✅ BrailleVision Backend Initializing...
+✅ TouchVision Backend Initializing...
 ✅ YOLOv8 detector loaded
 ✅ TTS engine initialized
 Uvicorn running on http://0.0.0.0:8000
@@ -131,7 +131,7 @@ curl http://localhost:8000/
 ```json
 {
   "status": "running",
-  "app": "BrailleVision",
+  "app": "TouchVision",
   "version": "1.0.0",
   "detector_loaded": true,
   "tts_loaded": true
@@ -171,7 +171,7 @@ print(result)
 **Response:**
 ```json
 {
-  "text": "BrailleVision",
+  "text": "TouchVision",
   "confidence": 0.87,
   "dots_detected": 18,
   "cells_found": 6,
@@ -209,7 +209,7 @@ import requests
 
 response = requests.post(
     "http://localhost:8000/speak",
-    json={"text": "BrailleVision"}
+    json={"text": "TouchVision"}
 )
 
 print(response.json())
@@ -257,7 +257,7 @@ curl http://localhost:8000/info
 **Response:**
 ```json
 {
-  "app": "BrailleVision",
+  "app": "TouchVision",
   "version": "1.0.0",
   "endpoints": {
     "GET /": "Health check",
@@ -400,7 +400,7 @@ python inference/inference.py \
 **Installation:**
 ```bash
 # Copy to your project
-cp -r BrailleVision/backend your_project/
+cp -r TouchVision/backend your_project/
 
 # Install dependencies
 pip install -r your_project/backend/requirements.txt
@@ -409,7 +409,7 @@ pip install -r your_project/backend/requirements.txt
 **Import and Use:**
 ```python
 import sys
-sys.path.insert(0, 'path/to/BrailleVision')
+sys.path.insert(0, 'path/to/TouchVision')
 
 from backend.core.detector import BrailleDetector
 from backend.core.cell_grouper import group_into_cells
@@ -492,7 +492,7 @@ while True:
     boxes, confs, labels, annotated = detector.detect_with_annotated(frame)
     
     # Show
-    cv2.imshow('BrailleVision', annotated)
+    cv2.imshow('TouchVision', annotated)
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
@@ -546,7 +546,7 @@ FileNotFoundError: Model weights not found at model/best.pt
 **Solutions:**
 1. Check if `model/best.pt` exists
 2. Download from: [Google Drive Link or Model Storage]
-3. Place in `BrailleVision/model/` directory
+3. Place in `TouchVision/model/` directory
 
 ---
 

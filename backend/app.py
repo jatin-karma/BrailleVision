@@ -1,5 +1,5 @@
 """
-BrailleVision FastAPI Backend.
+TouchVision FastAPI Backend.
 Provides /predict and /speak endpoints for Braille detection and TTS.
 """
 
@@ -24,7 +24,7 @@ from core.tts_engine import TTSEngine
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="BrailleVision API",
+    title="TouchVision API",
     description="Real-time Braille to English converter",
     version="1.0.0"
 )
@@ -39,7 +39,7 @@ app.add_middleware(
 )
 
 # Initialize components
-print("🔵 BrailleVision Backend Initializing...")
+print("🔵 TouchVision Backend Initializing...")
 
 try:
     detector = BrailleDetector()
@@ -73,7 +73,7 @@ async def root():
     """Health check endpoint."""
     return {
         "status": "running",
-        "app": "BrailleVision",
+        "app": "TouchVision",
         "version": "1.0.0",
         "detector_loaded": detector is not None,
         "tts_loaded": tts is not None,
@@ -236,7 +236,7 @@ async def detect_raw(file: UploadFile = File(...)):
 async def info():
     """Get system information."""
     return {
-        "app": "BrailleVision",
+        "app": "TouchVision",
         "version": "1.0.0",
         "endpoints": {
             "GET /": "Health check",

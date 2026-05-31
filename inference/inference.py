@@ -1,5 +1,5 @@
 """
-Inference script for BrailleVision.
+Inference script for TouchVision.
 Performs end-to-end Braille detection and decoding on images or webcam feed.
 """
 
@@ -56,7 +56,7 @@ def main(args):
             cv2.putText(display_frame, f"Braille: {text}", (10, 30),
                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             
-            cv2.imshow("BrailleVision Inference", display_frame)
+            cv2.imshow("TouchVision Inference", display_frame)
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -102,7 +102,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="BrailleVision Inference")
+    parser = argparse.ArgumentParser(description="TouchVision Inference")
     parser.add_argument("--source", type=str, default="0", help="Image file or camera (0)")
     parser.add_argument("--weights", type=str, default="model/best.pt", help="Model weights path")
     parser.add_argument("--output", type=str, default=None, help="Output image path")

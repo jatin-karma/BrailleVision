@@ -90,4 +90,4 @@ dataset/
 **Dataset Created:** 2026-05-31  
 **Total Size:** ~500 MB (images + labels)  
 **Format:** YOLO detection format  
-**Recommended Citation:** BrailleVision Team (2026), Braille Dot Detection Dataset
+**Recommended Citation:** TouchVision Team (2026), Braille Dot Detection Dataset

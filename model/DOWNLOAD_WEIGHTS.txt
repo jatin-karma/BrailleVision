@@ -4,10 +4,10 @@ The model file 'best.pt' is not included in the repository due to size constrain
 
 To download the model:
 1. Download from provided link in model/model_info.md
-2. Place the 'best.pt' file in the 'd:\BrailleVision\model\' directory
+2. Place the 'best.pt' file in the 'd:\TouchVision\model\' directory
 3. The system will then be ready for inference
 
-File should be at: d:\BrailleVision\model\best.pt
+File should be at: d:\TouchVision\model\best.pt
 
 Size: ~50-100 MB
 Format: YOLOv8 PyTorch model

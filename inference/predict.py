@@ -1,5 +1,5 @@
 """
-Batch prediction helper for BrailleVision.
+Batch prediction helper for TouchVision.
 Processes multiple images and generates results.
 """
 

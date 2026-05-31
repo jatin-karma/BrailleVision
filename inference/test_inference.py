@@ -1,5 +1,5 @@
 """
-BrailleVision Integration Test Suite
+TouchVision Integration Test Suite
 Tests core inference pipeline components
 """
 
@@ -95,7 +95,7 @@ def test_braille_map():
 def run_all_tests():
     """Run all tests."""
     print("=" * 60)
-    print("BrailleVision Component Tests")
+    print("TouchVision Component Tests")
     print("=" * 60)
     
     tests = [

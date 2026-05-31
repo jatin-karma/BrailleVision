@@ -1,13 +1,13 @@
-# 🔵 BrailleVision — Real-Time Braille to English Converter
+# 🔵 TouchVision — Real-Time Braille to English Converter
 
-> **BrailleVision Hackathon 2026 Submission**  
+> **TouchVision Hackathon 2026 Submission**  
 > Converts real physical handwritten/embossed Braille into English text and speech using live camera input.
 
 ---
 
 ## 📌 Project Overview
 
-BrailleVision is an assistive technology system that uses a camera to detect and decode real physical Braille dots from embossed or handwritten Braille surfaces and converts them into English text with optional text-to-speech (TTS) output.
+TouchVision is an assistive technology system that uses a camera to detect and decode real physical Braille dots from embossed or handwritten Braille surfaces and converts them into English text with optional text-to-speech (TTS) output.
 
 **Core Pipeline:**
 ```
@@ -166,7 +166,7 @@ Example output with detected dots and decoded text:
 ### Example API Response
 ```json
 {
-  "text": "BrailleVision",
+  "text": "TouchVision",
   "confidence": 0.87,
   "dots_detected": 18,
   "cells_found": 6,
@@ -183,12 +183,12 @@ The YOLOv8 model was trained on custom Braille dot dataset. Here's how to replic
 ### Step 1: Prepare Dataset (Google Drive)
 
 1. **Upload your dataset to Google Drive:**
-   - Create folder: `/BrailleVision/dataset/` in Drive
+   - Create folder: `/TouchVision/dataset/` in Drive
    - Add annotated images and `data.yaml` configuration
 
 2. **data.yaml format:**
    ```yaml
-   path: /content/drive/MyDrive/BrailleVision/dataset
+   path: /content/drive/MyDrive/TouchVision/dataset
    train: images/train
    val: images/val
    test: images/test
@@ -226,7 +226,7 @@ model = YOLO('yolov8n.pt')
 
 # Start training
 results = model.train(
-    data='/content/drive/MyDrive/BrailleVision/dataset/data.yaml',
+    data='/content/drive/MyDrive/TouchVision/dataset/data.yaml',
     epochs=100,
     imgsz=640,
     batch=16,
@@ -349,8 +349,8 @@ for filename in os.listdir(input_dir):
 
 **1. Clone and Setup**
 ```bash
-git clone https://github.com/jatin-karma/BrailleVision.git
-cd BrailleVision
+git clone https://github.com/jatin-karma/TouchVision.git
+cd TouchVision
 pip install -r requirements.txt
 cd frontend && npm install && cd ..
 ```
@@ -490,7 +490,7 @@ curl -X POST http://localhost:8000/speak \
 ### Directory Structure Quick Reference
 
 ```
-BrailleVision/
+TouchVision/
 ├── backend/          ← FastAPI server (start here)
 │   ├── app.py       ← Main application
 │   ├── config.py    ← Configuration
@@ -544,7 +544,7 @@ curl -X POST http://localhost:8000/predict -F "file=@image.jpg" | python -m json
 ```bash
 curl -X POST http://localhost:8000/speak \
   -H "Content-Type: application/json" \
-  -d '{"text":"BrailleVision"}'
+  -d '{"text":"TouchVision"}'
 ```
 
 ### Troubleshooting Usage Issues

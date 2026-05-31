@@ -1,6 +1,6 @@
-# 🤖 BrailleVision — AI Tools Disclosure
+# 🤖 TouchVision — AI Tools Disclosure
 
-This document discloses all AI tools and services used in the development of BrailleVision during the Hackathon 2026 submission window.
+This document discloses all AI tools and services used in the development of TouchVision during the Hackathon 2026 submission window.
 
 ---
 

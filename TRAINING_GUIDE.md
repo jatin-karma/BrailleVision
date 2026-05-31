@@ -21,7 +21,7 @@ https://drive.google.com/drive/folders/1aB2cD3eF4gH5iJ6kL7mN8oP9qR0sT1uV
 ```
 
 **How to get your link:**
-1. Open Google Drive and find your BrailleVision dataset folder
+1. Open Google Drive and find your TouchVision dataset folder
 2. Right-click the folder
 3. Select "Get link"
 4. Copy the link (should look like: `https://drive.google.com/drive/folders/...`)
@@ -35,7 +35,7 @@ https://drive.google.com/drive/folders/1aB2cD3eF4gH5iJ6kL7mN8oP9qR0sT1uV
 ### Option A: Download Entire Folder (Recommended)
 
 1. **Open Google Drive:** https://drive.google.com
-2. **Find your BrailleVision dataset folder** (from your Colab training)
+2. **Find your TouchVision dataset folder** (from your Colab training)
 3. **Right-click the folder** → Select **"Download"**
 4. **Browser downloads it as ZIP** (may take 5-10 minutes for large datasets)
 5. **Extract ZIP** to your local machine
@@ -73,7 +73,7 @@ files.download('braille_dataset.zip')
 ### Expected Directory Structure:
 
 ```
-d:/BrailleVision/dataset/
+d:/TouchVision/dataset/
 ├── data.yaml                    ← Already have this
 ├── images/
 │   ├── train/                   ← YOLO format images
@@ -100,10 +100,10 @@ d:/BrailleVision/dataset/
 ### Steps:
 
 1. **Extract your downloaded ZIP file**
-2. **Copy the `images` and `labels` folders** into `d:/BrailleVision/dataset/`
+2. **Copy the `images` and `labels` folders** into `d:/TouchVision/dataset/`
 3. **Verify structure:**
    ```bash
-   cd d:/BrailleVision/dataset
+   cd d:/TouchVision/dataset
    dir images/train    # Should show JPG/PNG files
    dir labels/train    # Should show .txt files
    ```
@@ -115,7 +115,7 @@ d:/BrailleVision/dataset/
 ### Option A: Automatic Setup (Recommended)
 
 ```bash
-cd d:/BrailleVision
+cd d:/TouchVision
 python setup_training_env.py
 ```
 
@@ -130,7 +130,7 @@ This script will:
 ### Option B: Manual YOLO Training Command
 
 ```bash
-cd d:/BrailleVision
+cd d:/TouchVision
 
 # Run training
 yolo detect train \
@@ -172,7 +172,7 @@ from ultralytics import YOLO
 
 model = YOLO('yolov8n.pt')
 results = model.train(
-    data='/content/drive/MyDrive/BrailleVision/dataset/data.yaml',
+    data='/content/drive/MyDrive/TouchVision/dataset/data.yaml',
     epochs=100,
     imgsz=640,
     batch=16,
@@ -241,7 +241,7 @@ model/
 You'll see output like:
 
 ```
-🔵 BrailleVision Backend Initializing...
+🔵 TouchVision Backend Initializing...
 ✅ YOLOv8 detector loaded
 
 🚀 Starting YOLO Training...

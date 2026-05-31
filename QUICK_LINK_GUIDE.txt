@@ -9,7 +9,7 @@
 ### Main File (Most Important)
 **FILE:** `PROJECT_LINKS.md`
 **EDIT WITH:** Visual Studio Code, Notepad, or any text editor
-**COMMAND:** `code d:/BrailleVision/PROJECT_LINKS.md`
+**COMMAND:** `code d:/TouchVision/PROJECT_LINKS.md`
 
 ---
 
@@ -110,9 +110,9 @@ https://drive.google.com/file/d/YOUR_FILE_ID/view
 ## 📍 File Locations Reference
 
 ```
-d:/BrailleVision/PROJECT_LINKS.md        ← MAIN FILE (Start here!)
-d:/BrailleVision/README.md                ← References PROJECT_LINKS.md
-d:/BrailleVision/TRAINING_GUIDE.md        ← Has dataset link at top
+d:/TouchVision/PROJECT_LINKS.md        ← MAIN FILE (Start here!)
+d:/TouchVision/README.md                ← References PROJECT_LINKS.md
+d:/TouchVision/TRAINING_GUIDE.md        ← Has dataset link at top
 ```
 
 ---

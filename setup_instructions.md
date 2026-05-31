@@ -1,4 +1,4 @@
-# BrailleVision — Setup Instructions
+# TouchVision — Setup Instructions
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Ensure you have the following installed:
 ### 1. Navigate to Project Directory
 
 ```bash
-cd d:\BrailleVision
+cd d:\TouchVision
 ```
 
 ### 2. Create a Python Virtual Environment (Recommended)

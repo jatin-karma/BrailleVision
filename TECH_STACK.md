@@ -1,4 +1,4 @@
-# 🛠️ BrailleVision — Tech Stack
+# 🛠️ TouchVision — Tech Stack
 
 ## Backend
 
